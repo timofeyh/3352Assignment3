@@ -34,11 +34,7 @@ public class Page implements Element{
         this.name = name;
     }
 
-    @Override
-    public void edit() {
-
-    }
-
+ 
     @Override
     public void display() {
 
