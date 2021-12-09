@@ -5,24 +5,23 @@ public class ViewPage {
 	    private Model.Page page;
 	    private Controller.addContentController controller; 
 
-	    public ViewPage (models.Page page ,models.EmbededContent model, Controller.addContentController controller ) {
+	    public ViewPage (models.Page page ,models.EmbededContent model) {
 	        
 	        this.setModel(model);   
 
-	        this.setModel(page); 
-	         
-	        this.setController(controller); 
+	        this.setModel(page);
 
 	    }
 
 
-
-	    public void addEmbeddedContent() {
-
+		// This should be in controller
+	    public void addElement(Element e) {
+			this.page.addElement(e);
 	    }
-	    public void deleteEmbeddedContent() {
-
+	    public void removeElement(int Index) {
+			this.page.removeElement(Index);
 	    }
+		/////////////////////////////////
 
 	    public String getName() {
 	    }
@@ -45,7 +44,6 @@ public class ViewPage {
 	        this.page = page;
 	    }
 
-
 	    public models.EmbededContent getModel(){
 	        return model; 
 	    }
@@ -56,8 +54,7 @@ public class ViewPage {
 
 	
 	    public Controller.addContentController getController() {
-	        return controller; 
-
+	        return controller;
 	    }
 
 	    public void setController (Controller.addContentController controller) {
